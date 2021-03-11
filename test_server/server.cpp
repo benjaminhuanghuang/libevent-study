@@ -39,6 +39,17 @@ int main()
   {
     cout << "event_base_new success" << endl;
   }
+  // socket modes
+  const char **methods = event_get_supported_methods();
+  cout << "-- supported methods: " << endl;
+  for (int i = 0; methods[i] != NULL; i++)
+  {
+    cout << methods[i] << endl;
+  }
+
+  // config
+  event_config *conf= event_config_new();
+  event
 
   // Address
   struct sockaddr_in sin = {0};

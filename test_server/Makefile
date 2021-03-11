@@ -1,5 +1,6 @@
-main: main.cpp 
+server: server.cpp
 	g++ $< -o $@.exe -levent
 
-test: test.cpp
-	g++ $< -o $@.exe -levent
+
+clean:
+	rm -rf *.exe
